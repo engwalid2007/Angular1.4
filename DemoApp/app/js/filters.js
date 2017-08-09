@@ -4,11 +4,11 @@ eventsApp.filter('duration',function(){
 
         switch (input){
 
-            case 1:
+            case "1":
                 return "Full day";
-            case 2:
+            case "2":
                 return "Half day";
-            case 3:
+            case "3":
                 return "1 hour";
         }
     }
