@@ -1,0 +1,46 @@
+<img ng-src="{{event.imgUrl}}" alt="{{event.name}}">
+<div class="row">
+    <div class="spann11">
+        <h1>{{event.name | uppercase }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="span3">
+        <div><strong>Date: </strong>{{event.date}}</div>
+        <div><strong>Time: </strong>{{event.time}}</div>
+
+    </div>
+    <div class="span4">
+        <div><strong>City: </strong>{{event.location.city}}</div>
+        <div><strong>location: </strong>{{event.location.province}}</div>
+    </div>
+</div>
+<hr> sort by: <select class="input-small" ng-model="sortBy">
+    <option value="name">Name</option>
+    <option value="-upVoteCount">Vote</option>
+</select> filter By:
+<input ng-model="query.upVoteCount" class="input-small">
+</select>
+<h1>Sessions</h1>
+<ul class="thumbnails">
+    <li ng-repeat="item in event.sessions | orderBy:sortBy | filter:query">
+        <div class="row session">
+            <div class="votingWidget well span0">
+                <div class="votingButton" ng-click="upVoting(item)">
+                    <i class="icon-chevron-up icon-white"></i>
+                </div>
+
+                <div class="badge badge-inverse">
+                    {{item.upVoteCount}}
+                </div>
+                <div class="votingButton" ng-click="downVoting(item)">
+                    <i class="icon-chevron-down"></i>
+                </div>
+            </div>
+            <div class="well span9">
+                <strong>Session Name:</strong>{{item.name}}
+                <strong>Duration:</strong>{{item.duration | duration}}
+            </div>
+        </div>
+    </li>
+</ul>

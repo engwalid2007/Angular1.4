@@ -1,11 +1,11 @@
 'use strict';
 
-eventsApp.controller('eventDetailsCrtl', function ($scope,eventsData) {
+eventsApp.controller('eventDetailsCrtl', function ($scope,eventsData,$routeParams) {
     $scope.sortBy = "name";
     // eventsData.getEvent(function(data){
     //     $scope.event = data;    
     // });
-    eventsData.getEvent(1).$promise.then(function(event){
+    eventsData.getEvent($routeParams.id).$promise.then(function(event){
         $scope.event=event;
     }).catch(function(response){
         alert(response.status)

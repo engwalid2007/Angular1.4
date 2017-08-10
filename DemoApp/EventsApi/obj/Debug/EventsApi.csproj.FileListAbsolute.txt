@@ -73,3 +73,4 @@ D:\github\Repos\angular1.4\DemoApp\EventsApi\obj\Debug\EventsApi.pdb
 D:\github\Repos\angular1.4\DemoApp\EventsApi\bin\System.Web.Cors.dll
 D:\github\Repos\angular1.4\DemoApp\EventsApi\bin\System.Web.Http.Cors.dll
 D:\github\Repos\angular1.4\DemoApp\EventsApi\bin\System.Web.Http.Cors.xml
+D:\github\Repos\angular1.4\DemoApp\EventsApi\obj\Debug\EventsApi.csprojResolveAssemblyReference.cache

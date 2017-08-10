@@ -86,8 +86,10 @@ namespace EventsApi.Controllers
             else
                 return Request.CreateResponse(HttpStatusCode.NotFound);
         }
-        public void Post(string id, [FromBody]Event eventData)
+        public void Post([FromBody]Event eventData)
         {
+            int id = int.Parse(ev.Max(c => c.Id));
+            eventData.Id = (id+1).ToString();
             ev.Add(eventData);
         }
     }

@@ -15,8 +15,10 @@ eventsApp.factory('eventsData', function ($resource) {
         saveEvent:function(event){
             event.id="10";
             return resource.save(event);
+        },
+        getAllEvents : function(){
+            return resource.query();
         }
-
 
     }
 
