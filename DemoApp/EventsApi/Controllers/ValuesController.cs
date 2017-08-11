@@ -92,5 +92,10 @@ namespace EventsApi.Controllers
             eventData.Id = (id+1).ToString();
             ev.Add(eventData);
         }
+        [HttpPost]
+        public void SaveData()
+        {
+
+        }
     }
 }

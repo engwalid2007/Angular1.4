@@ -7,7 +7,7 @@
                 <label for="eventName">Event Name:</label>
                 <input type="text" required ng-model="event.name" id="eventName" placeholder="Enter event name">
                 <label for="eventDate">Event Date:</label>
-                <input type="text" ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" id="eventDate" placeholder="Enter event Date(dd/MM/yyyy)">
+                <input type="text" ng-pattern="/\d\d/\d\d/\d\d\d\d/" keydown ng-model="event.date" id="eventDate" placeholder="Enter event Date(dd/MM/yyyy)">
                 <label for="eventTime">Event Time:</label>
                 <input type="text" ng-model="event.time" id="eventTime" placeholder="Enter event time">
 
@@ -20,7 +20,7 @@
 
                 <label for="eventImage">Event Image Url:</label>
                 <input type="url" ng-model="event.imgUrl" id="eventImage" placeholder="Enter event image url">
-
+                 <input type="file" id="inoutFile" name="file" ng-model="event.fileToUpload">       
             </fieldset>
             <img ng-src="{{event.imgUrl}}" alt="">
             <br> <br>

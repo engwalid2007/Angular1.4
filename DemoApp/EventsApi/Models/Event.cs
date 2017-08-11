@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace EventsApi.Models
@@ -15,6 +16,9 @@ namespace EventsApi.Models
         public Location Location { get; set; }
         public List<Session> Sessions { get; set; }
 
+        public HttpPostedFile FileToUpload { get; set; }
+
+        
     }
     public class Location
     {
